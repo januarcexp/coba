@@ -6,4 +6,6 @@ test('bukalapak test', async ({ page }) => {
   await page.getByRole('link', { name: 'Paket Data' }).click();
   await page.getByRole('button', { name: 'Lanjut' }).click();
   await expect(page.getByText('Form harus diisi dulu ya')).toBeVisible();
+    await page.waitForLoadState('domcontentloaded');
+
 });
