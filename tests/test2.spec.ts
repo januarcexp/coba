@@ -5,7 +5,7 @@ test('bukalapak test', async ({ page }) => {
   await page.waitForLoadState('domcontentloaded');
   await page.getByRole('link', { name: 'Paket Data' }).click();
   await page.getByRole('button', { name: 'Lanjut' }).click();
-  await expect(page.getByText('Form harus diisi dulu ya')).toBeVisible();
+  await expect(page.getByText('Form ini di update dari januar')).toBeVisible();
     await page.waitForLoadState('domcontentloaded');
 
 });
